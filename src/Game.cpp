@@ -26,12 +26,14 @@ Game::Game(std::string title, int width, int height){
     
     }
     
+    // Inicializa processamento de imagens
     if(IMG_Init(imgFlags) != imgFlags){
     
         SDL_Log("Warning: Um ou mais formatos de imagem nao puderam ser inicializados: %s", IMG_GetError());
     
     }
     
+    // Inicializa processamento de audio
     if(Mix_Init(mixFlags) != mixFlags){
     
         SDL_Log("Warning: Um ou mais formatos de audio nao puderam ser inicializados: %s", Mix_GetError());
@@ -46,6 +48,8 @@ Game::Game(std::string title, int width, int height){
     }
     
     Mix_AllocateChannels(32);
+
+    // Cria janela e renderer
     window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, 0);
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     state = new State();
@@ -82,8 +86,8 @@ void Game::Run(){
 
         state->Update(0);
         state->Render();
-        SDL_RenderPresent(renderer);
-        SDL_Delay(33);
+        SDL_RenderPresent(renderer); 
+        SDL_Delay(33); //30fps
 
     }
 }

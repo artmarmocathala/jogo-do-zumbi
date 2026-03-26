@@ -4,6 +4,7 @@
 
 Music::Music(){
 
+    // ponteiro vazio pra chamar open em outro lugar
     music = nullptr;
 
 }
@@ -23,6 +24,7 @@ void Music::Play(int times){
 
 void Music::Stop(int msToStop){
 
+    // para a musica gradualmente
     Mix_FadeOutMusic(msToStop);
 
 }

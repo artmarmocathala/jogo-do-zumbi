@@ -5,6 +5,7 @@
 
 Sprite::Sprite(){
     
+    // ponteiro vazio pra chamar open em outro lugar
     texture = nullptr;
 
 }
@@ -41,6 +42,7 @@ void Sprite::Open(std::string file){
 
 void Sprite::SetClip(int x, int y, int w, int h){
 
+    // so renderiza parte da textura
     clipRect.x = x;
     clipRect.y = y;
     clipRect.w = w;
@@ -50,6 +52,7 @@ void Sprite::SetClip(int x, int y, int w, int h){
 
 void Sprite::Render(int x, int y){
 
+    // posicao onde o recorte da textura eh renderizado
     SDL_Rect dstRect = {x, y, clipRect.w, clipRect.h};
     SDL_RenderCopy(Game::GetInstance().GetRenderer(), texture, &clipRect, &dstRect);
 

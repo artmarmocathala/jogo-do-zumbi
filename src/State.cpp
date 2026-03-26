@@ -24,6 +24,7 @@ void State::LoadAssets(){
 
 void State::Update(float dt){
 
+	// verifica se a janela foi fechada
 	if(SDL_QuitRequested()) quitRequested = true;
 
 }

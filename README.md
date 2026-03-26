@@ -1,7 +1,7 @@
 ## Como compilar a primeira entrega:
 
 - Tenha as bibliotecas do SDL instaladas
-- Execute (Windows):
+- Execute (Windows, compilador 64 bits):
     ```bash
     g++ ./src/main.cpp ./src/Game.cpp ./src/State.cpp ./src/Sprite.cpp ./src/Music.cpp -o ./bin/Trabalho1 -I"Caminho/para/include/SDL2" -L"Caminho/para/lib" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf
     ```

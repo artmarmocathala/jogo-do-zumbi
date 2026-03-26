@@ -4,7 +4,7 @@
 #include "../include/Game.h"
 #include "../include/State.h"
 
-int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG | IMG_INIT_TIF;
+int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG;
 int mixFlags = MIX_INIT_OGG | MIX_INIT_MP3 | MIX_INIT_FLAC;
 
 Game* Game::instance = nullptr;

@@ -1,9 +1,13 @@
+#ifndef GAME_H
+#define GAME_H
+
 #include "SDL.h"
 #include <string>
 
 class State;
 
 class Game {
+    
     public:
 
         ~Game();
@@ -19,4 +23,7 @@ class Game {
         State* state;
         SDL_Window* window;
         SDL_Renderer* renderer;    
+
 }; 
+
+    #endif

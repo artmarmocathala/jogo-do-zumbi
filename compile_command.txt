@@ -1,1 +1,1 @@
-g++ test.cpp -o test -I"C:/SDL-2.32.10/include/SDL2" -L"C:/SDL-2.32.10/lib" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf
+g++ ./src/main.cpp ./src/Game.cpp ./src/State.cpp ./src/Sprite.cpp ./src/Music.cpp -o ./bin/TrabalhoX -I"C:/SDL-2.32.10/include/SDL2" -L"C:/SDL-2.32.10/lib" -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf

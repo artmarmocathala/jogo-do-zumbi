@@ -49,7 +49,7 @@ Game::Game(std::string title, int width, int height){
     
     Mix_AllocateChannels(32);
 
-    // Cria janela e renderer
+    // Cria janela e renderer 
     window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, 0);
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     state = new State();

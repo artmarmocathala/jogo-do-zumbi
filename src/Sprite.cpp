@@ -42,7 +42,7 @@ void Sprite::Open(std::string file){
 
 void Sprite::SetClip(int x, int y, int w, int h){
 
-    // so renderiza parte da textura
+    // so renderiza parte da textura 
     clipRect.x = x;
     clipRect.y = y;
     clipRect.w = w;
